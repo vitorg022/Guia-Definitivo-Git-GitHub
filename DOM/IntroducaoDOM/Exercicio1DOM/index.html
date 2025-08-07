@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de JavaScript</title>
+    <style>
+        /* Estilo para a classe "highlight" */
+        .highlight {
+            color: rgb(0, 255, 68);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Este é o título original</h1>
+    <p>Este é o parágrafo original.</p>
+
+    <button id="btnMostrarConteudo">Mostrar Conteúdo</button>
+    <button id="btnAlterarTexto">Alterar Texto</button>
+    <button id="btnAlterarFundo">Alterar Fundo</button>
+    <button id="btnAlterarClasse">Alterar Classe do Título</button>
+
+    <script>
+        // Selecionando elementos
+        const titulo = document.querySelector('h1');
+        const paragrafo = document.querySelector('p');
+        const btnMostrarConteudo = document.querySelector('#btnMostrarConteudo');
+        const btnAlterarTexto = document.querySelector('#btnAlterarTexto');
+        const btnAlterarFundo = document.querySelector('#btnAlterarFundo');
+        const btnAlterarClasse = document.querySelector('#btnAlterarClasse');
+
+        // Exibindo conteúdo dos elementos no console
+        btnMostrarConteudo.addEventListener('click', () => {
+            console.log("Título: " + titulo.textContent);
+            console.log("Parágrafo: " + paragrafo.textContent);
+        });
+
+        // Modificando o texto dos elementos
+        btnAlterarTexto.addEventListener('click', () => {
+            titulo.textContent = "Título modificado!";
+            paragrafo.textContent = "Parágrafo modificado!";
+        });
+
+        // Alterando a cor de fundo da página para azul
+        btnAlterarFundo.addEventListener('click', () => {
+            document.body.style.backgroundColor = "blue";
+        });
+
+        // Adicionando e removendo classe CSS do título
+        btnAlterarClasse.addEventListener('click', () => {
+            titulo.classList.toggle('highlight');
+        });
+    </script>
+</body>
+</html>
